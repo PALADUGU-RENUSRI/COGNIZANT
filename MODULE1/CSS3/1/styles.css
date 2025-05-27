@@ -1,0 +1,16 @@
+/* General Layout */
+.event {
+  border-radius: 5px;
+  box-shadow: 2px 2px 5px rgba(0,0,0,0.1);
+}
+
+/* Text styles */
+h2 {
+  color: #2e8b57;
+}
+
+/* Link styles */
+a {
+  color: #0066cc;
+  text-decoration: none;
+}

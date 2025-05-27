@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>jQuery Event Demo</title>
+  <style>
+    .event-card {
+      display: none;
+      border: 1px solid #ccc;
+      padding: 12px;
+      margin: 10px 0;
+      border-radius: 8px;
+      background: #f9f9f9;
+    }
+    #message {
+      font-weight: bold;
+      margin-top: 10px;
+    }
+  </style>
+  <!-- Include jQuery -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+
+  <h1>jQuery Community Events</h1>
+
+  <div class="event-card" id="eventCard">
+    <h3>Jazz Night</h3>
+    <p>Join us for a musical evening!</p>
+    <button id="registerBtn">Register</button>
+  </div>
+
+  <button id="showEvent">Show Event</button>
+  <button id="hideEvent">Hide Event</button>
+
+  <div id="message"></div>
+
+  <script src="main14.js"></script>
+</body>
+</html>

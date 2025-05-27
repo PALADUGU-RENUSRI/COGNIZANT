@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Reorder Columns</title>
+  <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+</head>
+<body>
+
+  <div class="container mt-4">
+    <div class="row">
+      <!-- First column (shown second on md+ screens) -->
+      <div class="col-md-6 order-md-2 mb-3">
+        <div class="p-3 bg-warning text-center">Column A (Second on small, First on md+)</div>
+      </div>
+
+      <!-- Second column (shown first on md+ screens) -->
+      <div class="col-md-6 order-md-1 mb-3">
+        <div class="p-3 bg-primary text-white text-center">Column B (First on small, Second on md+)</div>
+      </div>
+    </div>
+  </div>
+
+  <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

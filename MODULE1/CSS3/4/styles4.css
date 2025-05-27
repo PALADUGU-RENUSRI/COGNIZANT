@@ -1,0 +1,34 @@
+/* Apply background image to body with fallback color */
+body {
+  background-color: #e0f7fa; /* fallback color */
+  background-image: url('https://via.placeholder.com/1500x1000'); /* sample image */
+  background-size: cover;
+  background-position: center;
+  color: #222; /* base text color */
+  font-family: Arial, sans-serif;
+  margin: 0;
+}
+
+/* Site header with HEX text color */
+.site-header {
+  text-align: center;
+  padding: 40px 0;
+  color: #ffffff; /* HEX format */
+  background: rgba(0, 123, 255, 0.85); /* RGBA background */
+}
+
+/* Gradient background for section header */
+.news-section h2 {
+  padding: 15px;
+  text-align: center;
+  color: white;
+  background: linear-gradient(to right, #007BFF, #00C6FF);
+  margin-bottom: 10px;
+}
+
+/* Paragraph styling with RGBA text color */
+.news-section p {
+  text-align: center;
+  padding: 0 20px;
+  color: rgba(0, 0, 0, 0.75); /* semi-transparent black */
+}

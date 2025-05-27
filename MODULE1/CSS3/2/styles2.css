@@ -1,0 +1,30 @@
+/* General reset and box-sizing */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Style for the site header */
+.site-header {
+  background-color: #f4f4f4;
+  padding: 40px;
+  text-align: center;
+}
+
+/* Style for main CTA button */
+.cta-button {
+  background-color: #007BFF;
+  color: white;
+  padding: 12px 24px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/* Hover effect for CTA button */
+.cta-button:hover {
+  background-color: #0056b3;
+}

@@ -1,0 +1,42 @@
+/* Basic body styling */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f6f8;
+  padding: 2rem;
+  color: #333;
+}
+
+/* Table styling */
+.event-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Table head */
+.event-table th {
+  background-color: #004080;
+  color: white;
+  padding: 12px;
+  border: 1px solid #ccc;
+  text-align: center;
+}
+
+/* Table cells */
+.event-table td {
+  background-color: #fff;
+  padding: 10px;
+  border: 1px solid #ccc;
+  text-align: center;
+}
+
+/* Zebra striping */
+.event-table tbody tr:nth-child(even) {
+  background-color: #e8f1fb;
+}
+
+/* Optional: add hover effect */
+.event-table tbody tr:hover {
+  background-color: #d0e4f5;
+}

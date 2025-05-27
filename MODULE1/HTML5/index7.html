@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>User Preferences</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 30px;
+      background-color: #f0f0f0;
+    }
+    .container {
+      background-color: #fff;
+      padding: 20px;
+      max-width: 400px;
+      margin: auto;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    label {
+      font-weight: bold;
+    }
+    select, button {
+      width: 100%;
+      padding: 10px;
+      margin-top: 10px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+    button {
+      background-color: #dc3545;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #c82333;
+    }
+    .message {
+      margin-top: 15px;
+      color: green;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <label for="eventType">Select Your Preferred Event Type:</label>
+    <select id="eventType">
+      <option value="">--Choose an event--</option>
+      <option value="bbq">Community BBQ</option>
+      <option value="run">Charity Run</option>
+      <option value="art">Art Workshop</option>
+      <option value="cleanup">Neighborhood Cleanup</option>
+    </select>
+
+    <button onclick="clearPreferences()">Clear Preferences</button>
+
+    <div id="status" class="message"></div>
+  </div>
+
+  <script>
+    const eventSelect = document.getElementById("eventType");
+    const statusDiv = document.getElementById("status");
+
+    // Load saved preference
+    window.onload = function () {
+      const savedEvent = localStorage.getItem("preferredEvent");
+      if (savedEvent) {
+        eventSelect.value = savedEvent;
+        statusDiv.textContent = `Loaded your preferred event: ${eventSelect.options[eventSelect.selectedIndex].text}`;
+      }
+    };
+
+    // Save selection on change
+    eventSelect.onchange = function () {
+      const selectedValue = eventSelect.value;
+      localStorage.setItem("preferredEvent", selectedValue);
+      statusDiv.textContent = `Saved preference: ${eventSelect.options[eventSelect.selectedIndex].text}`;
+    };
+
+    // Clear preferences
+    function clearPreferences() {
+      localStorage.clear();
+      sessionStorage.clear();
+      eventSelect.value = "";
+      statusDiv.textContent = "Preferences cleared.";
+    }
+  </script>
+
+</body>
+</html>

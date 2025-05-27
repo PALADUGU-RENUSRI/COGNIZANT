@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Debugging Demo</title>
+  <style>
+    #box {
+      width: 150px;
+      height: 150px;
+      background-color: lightcoral;
+      margin: 30px auto;
+      text-align: center;
+      line-height: 150px;
+      color: white;
+      font-weight: bold;
+      font-size: 18px;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+  </style>
+</head>
+<body>
+
+  <div id="box">Click Me!</div>
+
+  <script>
+    console.log("Page loaded: Ready to debug!");
+
+    const box = document.getElementById("box");
+
+    box.addEventListener("click", () => {
+      console.log("Box clicked");
+      changeColor();
+    });
+
+    function changeColor() {
+      // Set breakpoint here to watch variable values
+      let colors = ["lightcoral", "lightseagreen", "lightblue", "lightgoldenrodyellow"];
+      let currentColor = box.style.backgroundColor;
+      console.log("Current color:", currentColor);
+
+      let nextIndex = colors.indexOf(currentColor) + 1;
+      if (nextIndex >= colors.length) nextIndex = 0;
+
+      box.style.backgroundColor = colors[nextIndex];
+      console.log("Changed to:", colors[nextIndex]);
+    }
+  </script>
+
+</body>
+</html>
